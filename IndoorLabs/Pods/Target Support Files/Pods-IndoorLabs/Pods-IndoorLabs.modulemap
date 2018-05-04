@@ -1,0 +1,6 @@
+framework module Pods_IndoorLabs {
+  umbrella header "Pods-IndoorLabs-umbrella.h"
+
+  export *
+  module * { export * }
+}

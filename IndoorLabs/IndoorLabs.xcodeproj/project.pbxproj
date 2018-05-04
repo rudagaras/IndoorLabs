@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		529C389523AC5FF9D0435B1F /* Pods_IndoorLabs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CBFDB30F96A42BFAFF13B3 /* Pods_IndoorLabs.framework */; };
 		F0112B1E209BD056008F8A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0112B1D209BD056008F8A1E /* AppDelegate.swift */; };
-		F0112B20209BD056008F8A1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0112B1F209BD056008F8A1E /* ViewController.swift */; };
 		F0112B23209BD056008F8A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0112B21209BD056008F8A1E /* Main.storyboard */; };
 		F0112B26209BD056008F8A1E /* IndoorLabs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0112B24209BD056008F8A1E /* IndoorLabs.xcdatamodeld */; };
 		F0112B28209BD057008F8A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0112B27209BD057008F8A1E /* Assets.xcassets */; };
 		F0112B2B209BD057008F8A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0112B29209BD057008F8A1E /* LaunchScreen.storyboard */; };
+		F08256E5209BD2E7003ABA74 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08256E4209BD2E7003ABA74 /* Login.swift */; };
+		F0F7DAC7209BDAF200F6D621 /* Globers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F7DAC6209BDAF200F6D621 /* Globers.swift */; };
+		F0F7DACA209BDC2B00F6D621 /* GlobersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F7DAC8209BDC2B00F6D621 /* GlobersCell.swift */; };
+		F0F7DACB209BDC2B00F6D621 /* GlobersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7DAC9209BDC2B00F6D621 /* GlobersCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E8C3D83F228BDE4498830A9 /* Pods-IndoorLabs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndoorLabs.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndoorLabs/Pods-IndoorLabs.release.xcconfig"; sourceTree = "<group>"; };
+		78CBFDB30F96A42BFAFF13B3 /* Pods_IndoorLabs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IndoorLabs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65B8EA715C63BB4EA0A133C /* Pods-IndoorLabs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndoorLabs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndoorLabs/Pods-IndoorLabs.debug.xcconfig"; sourceTree = "<group>"; };
 		F0112B1A209BD056008F8A1E /* IndoorLabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndoorLabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0112B1D209BD056008F8A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0112B1F209BD056008F8A1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0112B22209BD056008F8A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0112B25209BD056008F8A1E /* IndoorLabs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IndoorLabs.xcdatamodel; sourceTree = "<group>"; };
 		F0112B27209BD057008F8A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0112B2A209BD057008F8A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0112B2C209BD057008F8A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F08256E4209BD2E7003ABA74 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		F0F7DAC6209BDAF200F6D621 /* Globers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globers.swift; sourceTree = "<group>"; };
+		F0F7DAC8209BDC2B00F6D621 /* GlobersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobersCell.swift; sourceTree = "<group>"; };
+		F0F7DAC9209BDC2B00F6D621 /* GlobersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GlobersCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529C389523AC5FF9D0435B1F /* Pods_IndoorLabs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E860A6CE3DD1C707BB58592 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D65B8EA715C63BB4EA0A133C /* Pods-IndoorLabs.debug.xcconfig */,
+				1E8C3D83F228BDE4498830A9 /* Pods-IndoorLabs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9D3EFF53104A0299D6D40F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78CBFDB30F96A42BFAFF13B3 /* Pods_IndoorLabs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0112B11209BD056008F8A1E = {
 			isa = PBXGroup;
 			children = (
 				F0112B1C209BD056008F8A1E /* IndoorLabs */,
 				F0112B1B209BD056008F8A1E /* Products */,
+				8E860A6CE3DD1C707BB58592 /* Pods */,
+				D9D3EFF53104A0299D6D40F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				F0112B1D209BD056008F8A1E /* AppDelegate.swift */,
-				F0112B1F209BD056008F8A1E /* ViewController.swift */,
 				F0112B21209BD056008F8A1E /* Main.storyboard */,
 				F0112B27209BD057008F8A1E /* Assets.xcassets */,
 				F0112B29209BD057008F8A1E /* LaunchScreen.storyboard */,
 				F0112B2C209BD057008F8A1E /* Info.plist */,
 				F0112B24209BD056008F8A1E /* IndoorLabs.xcdatamodeld */,
+				F08256E4209BD2E7003ABA74 /* Login.swift */,
+				F0F7DAC6209BDAF200F6D621 /* Globers.swift */,
+				F0F7DAC8209BDC2B00F6D621 /* GlobersCell.swift */,
+				F0F7DAC9209BDC2B00F6D621 /* GlobersCell.xib */,
 			);
 			path = IndoorLabs;
 			sourceTree = "<group>";
@@ -74,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0112B2F209BD057008F8A1E /* Build configuration list for PBXNativeTarget "IndoorLabs" */;
 			buildPhases = (
+				70A81D23A4E6AE8CB484A331 /* [CP] Check Pods Manifest.lock */,
 				F0112B16209BD056008F8A1E /* Sources */,
 				F0112B17209BD056008F8A1E /* Frameworks */,
 				F0112B18209BD056008F8A1E /* Resources */,
@@ -127,20 +161,44 @@
 			files = (
 				F0112B2B209BD057008F8A1E /* LaunchScreen.storyboard in Resources */,
 				F0112B28209BD057008F8A1E /* Assets.xcassets in Resources */,
+				F0F7DACB209BDC2B00F6D621 /* GlobersCell.xib in Resources */,
 				F0112B23209BD056008F8A1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70A81D23A4E6AE8CB484A331 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IndoorLabs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0112B16209BD056008F8A1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0112B20209BD056008F8A1E /* ViewController.swift in Sources */,
 				F0112B1E209BD056008F8A1E /* AppDelegate.swift in Sources */,
 				F0112B26209BD056008F8A1E /* IndoorLabs.xcdatamodeld in Sources */,
+				F0F7DAC7209BDAF200F6D621 /* Globers.swift in Sources */,
+				F0F7DACA209BDC2B00F6D621 /* GlobersCell.swift in Sources */,
+				F08256E5209BD2E7003ABA74 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +340,7 @@
 		};
 		F0112B30209BD057008F8A1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65B8EA715C63BB4EA0A133C /* Pods-IndoorLabs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +359,7 @@
 		};
 		F0112B31209BD057008F8A1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E8C3D83F228BDE4498830A9 /* Pods-IndoorLabs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
