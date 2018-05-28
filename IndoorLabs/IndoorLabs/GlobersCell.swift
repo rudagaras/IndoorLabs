@@ -15,19 +15,12 @@ class GlobersCell: UITableViewCell {
     @IBOutlet weak var globerPosition: UILabel!
     @IBOutlet weak var globerEmail: UILabel!
     @IBOutlet weak var globerStatus: UIImageView!
-    
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-    
 }
