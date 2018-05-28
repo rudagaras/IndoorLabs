@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 struct GloberCellStruct {
     var globerPhoto: UIImage!
@@ -19,19 +20,66 @@ struct GloberCellStruct {
 class Globers: UIViewController {
 
     @IBOutlet weak var globersTable: UITableView!
-    
     var globerCellData = [GloberCellStruct]()
+    var ref: DatabaseReference?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        globerCellData = [
-            GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing1", globerPosition: "position1", globerEmail: "email1", globerStatus: #imageLiteral(resourceName: "on")),
-            GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing2", globerPosition: "position2", globerEmail: "email2", globerStatus: #imageLiteral(resourceName: "on")),
-            GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing3", globerPosition: "position3", globerEmail: "email3", globerStatus: #imageLiteral(resourceName: "off")),
-            GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing4", globerPosition: "position4", globerEmail: "email4", globerStatus: #imageLiteral(resourceName: "off"))
-        ]
+        ref = Database.database().reference()
+        ref?.child("glober").observeSingleEvent(of: .value, with: { (snapshot) in
+            let enumerator = snapshot.children
+            while let rest = enumerator.nextObject() as? DataSnapshot {
+                let value = rest.value as? NSDictionary
+                let name = value?["name"] as? String ?? ""
+                let position = value?["position"] as? String ?? ""
+                let email = value?["email"] as? String ?? ""
+                var statusImg = UIImage()
+                let status = value?["status"] as? String ?? ""
+                if status == "on" {
+                    statusImg = UIImage(named: "on.png")!
+                } else {
+                    statusImg = UIImage(named: "off.png")!
+                }
+                self.globerCellData.append(GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: name, globerPosition: position, globerEmail: email, globerStatus: statusImg))
+                self.globersTable.reloadData()
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+ 
+        /*
+        ref?.child("glober").child("1").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let name = value?["name"] as? String ?? ""
+            let position = value?["position"] as? String ?? ""
+            let email = value?["email"] as? String ?? ""
+            let status = value?["status"] as? String ?? ""
 
+            print("aca el resultado =====================")
+            print(name)
+            print(position)
+            print(email)
+            print(status)
+
+            self.globerCellData = [
+                GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: name, globerPosition: position, globerEmail: email, globerStatus: #imageLiteral(resourceName: "on")),
+                GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing2", globerPosition: "position2", globerEmail: "email2", globerStatus: #imageLiteral(resourceName: "on")),
+                GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing3", globerPosition: "position3", globerEmail: "email3", globerStatus: #imageLiteral(resourceName: "off")),
+                GloberCellStruct(globerPhoto: #imageLiteral(resourceName: "imagen1"), globerName: "testing4", globerPosition: "position4", globerEmail: "email4", globerStatus: #imageLiteral(resourceName: "off")),
+            ]
+            self.globersTable.reloadData()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        */
+        
+        
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,12 +107,6 @@ extension Globers: UITableViewDataSource {
         cell.globerEmail?.text = globerCellData[indexPath.row].globerEmail
         cell.globerStatus?.image = globerCellData[indexPath.row].globerStatus
         return cell
-        
-//        let recipeResultCell = Bundle.main.loadNibNamed("RecipeResultsCell", owner: self, options: nil)?.first as! RecipeResultsCell
-//        recipeResultCell.recipeImage.image = cellResultData[indexPath.row].recipeImage
-//        recipeResultCell.recipeName.text = cellResultData[indexPath.row].recipeName
-//        recipeResultCell.recipeCountry.text = cellResultData[indexPath.row].recipeCountry
-//        return recipeResultCell
     }
     
     
